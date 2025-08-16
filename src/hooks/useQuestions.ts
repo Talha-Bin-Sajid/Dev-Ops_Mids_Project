@@ -10,7 +10,7 @@ export const useQuestions = () => {
     const loadQuestions = async () => {
       try {
         setLoading(true);
-        const response = await fetch('/src/data/questions.json');
+        const response = await fetch('/data/questions.json');
         
         if (!response.ok) {
           throw new Error('Failed to load questions');
