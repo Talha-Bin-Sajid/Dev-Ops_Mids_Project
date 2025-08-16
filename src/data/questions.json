@@ -1,0 +1,606 @@
+[
+  {
+    "question": "Which command lists all files including hidden ones?",
+    "options": ["ls -a", "ls -l", "ls -h", "ls -r"],
+    "answer": "ls -a",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What command displays current disk usage?",
+    "options": ["df -h", "du -h", "free -m", "top"],
+    "answer": "df -h",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which command shows running processes?",
+    "options": ["ps aux", "ls -la", "cat /proc", "df -h"],
+    "answer": "ps aux",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What command changes file permissions in Linux?",
+    "options": ["chown", "chmod", "chgrp", "chdir"],
+    "answer": "chmod",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which command searches for text in files?",
+    "options": ["find", "grep", "locate", "search"],
+    "answer": "grep",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What command monitors system resources in real-time?",
+    "options": ["ps", "ls", "top", "df"],
+    "answer": "top",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which command creates a directory?",
+    "options": ["mkdir", "makedir", "createdir", "newdir"],
+    "answer": "mkdir",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What command removes a file?",
+    "options": ["delete", "remove", "rm", "del"],
+    "answer": "rm",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which command copies files?",
+    "options": ["copy", "cp", "mv", "duplicate"],
+    "answer": "cp",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What command moves/renames files?",
+    "options": ["move", "rename", "mv", "rn"],
+    "answer": "mv",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which command shows file contents?",
+    "options": ["show", "display", "cat", "view"],
+    "answer": "cat",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What command shows the last lines of a file?",
+    "options": ["tail", "end", "last", "bottom"],
+    "answer": "tail",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which command shows the first lines of a file?",
+    "options": ["head", "top", "first", "begin"],
+    "answer": "head",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What command finds files and directories?",
+    "options": ["search", "locate", "find", "seek"],
+    "answer": "find",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which command shows memory usage?",
+    "options": ["memory", "mem", "free", "ram"],
+    "answer": "free",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which command shows system information?",
+    "options": ["info", "system", "uname", "about"],
+    "answer": "uname",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What command compresses files using tar?",
+    "options": ["tar -czf", "compress", "zip", "gzip"],
+    "answer": "tar -czf",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which command extracts tar archives?",
+    "options": ["tar -xzf", "extract", "unzip", "uncompress"],
+    "answer": "tar -xzf",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What is the default SSH port?",
+    "options": ["21", "22", "23", "25"],
+    "answer": "22",
+    "category": "Networking"
+  },
+  {
+    "question": "Which port does HTTP use by default?",
+    "options": ["443", "8080", "80", "3000"],
+    "answer": "80",
+    "category": "Networking"
+  },
+  {
+    "question": "What is the default HTTPS port?",
+    "options": ["80", "443", "8443", "22"],
+    "answer": "443",
+    "category": "Networking"
+  },
+  {
+    "question": "Which command shows network connections?",
+    "options": ["netstat", "ifconfig", "ping", "traceroute"],
+    "answer": "netstat",
+    "category": "Networking"
+  },
+  {
+    "question": "What command tests network connectivity?",
+    "options": ["test", "connect", "ping", "check"],
+    "answer": "ping",
+    "category": "Networking"
+  },
+  {
+    "question": "Which command shows network interface configuration?",
+    "options": ["netconfig", "ifconfig", "ipconfig", "network"],
+    "answer": "ifconfig",
+    "category": "Networking"
+  },
+  {
+    "question": "What is the localhost IP address?",
+    "options": ["192.168.1.1", "127.0.0.1", "10.0.0.1", "172.16.0.1"],
+    "answer": "127.0.0.1",
+    "category": "Networking"
+  },
+  {
+    "question": "Which protocol is used for secure file transfer?",
+    "options": ["FTP", "HTTP", "SFTP", "SMTP"],
+    "answer": "SFTP",
+    "category": "Networking"
+  },
+  {
+    "question": "What command traces network route to a destination?",
+    "options": ["route", "path", "traceroute", "trace"],
+    "answer": "traceroute",
+    "category": "Networking"
+  },
+  {
+    "question": "Which port does FTP use by default?",
+    "options": ["20", "21", "22", "23"],
+    "answer": "21",
+    "category": "Networking"
+  },
+  {
+    "question": "Which DNS record type maps a domain to an IP address?",
+    "options": ["CNAME", "A", "MX", "TXT"],
+    "answer": "A",
+    "category": "DNS"
+  },
+  {
+    "question": "Which DNS record type is used for mail servers?",
+    "options": ["A", "CNAME", "MX", "NS"],
+    "answer": "MX",
+    "category": "DNS"
+  },
+  {
+    "question": "What does CNAME record do?",
+    "options": ["Maps domain to IP", "Creates alias for domain", "Defines mail server", "Sets nameserver"],
+    "answer": "Creates alias for domain",
+    "category": "DNS"
+  },
+  {
+    "question": "Which command queries DNS records?",
+    "options": ["dns", "lookup", "nslookup", "query"],
+    "answer": "nslookup",
+    "category": "DNS"
+  },
+  {
+    "question": "What does TTL stand for in DNS?",
+    "options": ["Time To Live", "Total Time Limit", "Transfer Time Log", "Track Time Length"],
+    "answer": "Time To Live",
+    "category": "DNS"
+  },
+  {
+    "question": "Which DNS record type defines nameservers?",
+    "options": ["A", "NS", "MX", "CNAME"],
+    "answer": "NS",
+    "category": "DNS"
+  },
+  {
+    "question": "What is the purpose of PTR records?",
+    "options": ["Forward lookup", "Reverse lookup", "Mail routing", "Subdomain mapping"],
+    "answer": "Reverse lookup",
+    "category": "DNS"
+  },
+  {
+    "question": "Which tool can perform DNS lookups and zone transfers?",
+    "options": ["ping", "dig", "curl", "wget"],
+    "answer": "dig",
+    "category": "DNS"
+  },
+  {
+    "question": "What does SOA record contain?",
+    "options": ["IP addresses", "Mail servers", "Zone authority info", "Subdomain aliases"],
+    "answer": "Zone authority info",
+    "category": "DNS"
+  },
+  {
+    "question": "Which port does DNS use by default?",
+    "options": ["25", "53", "80", "443"],
+    "answer": "53",
+    "category": "DNS"
+  },
+  {
+    "question": "What command creates a new Git repository?",
+    "options": ["git create", "git new", "git init", "git start"],
+    "answer": "git init",
+    "category": "Git"
+  },
+  {
+    "question": "Which Git command stages changes?",
+    "options": ["git commit", "git add", "git push", "git stage"],
+    "answer": "git add",
+    "category": "Git"
+  },
+  {
+    "question": "What command creates a new Git branch?",
+    "options": ["git branch <name>", "git create <name>", "git new <name>", "git add <name>"],
+    "answer": "git branch <name>",
+    "category": "Git"
+  },
+  {
+    "question": "Which command switches to a different branch?",
+    "options": ["git switch", "git change", "git checkout", "git move"],
+    "answer": "git checkout",
+    "category": "Git"
+  },
+  {
+    "question": "What command shows the status of working directory?",
+    "options": ["git info", "git status", "git show", "git state"],
+    "answer": "git status",
+    "category": "Git"
+  },
+  {
+    "question": "Which command commits staged changes?",
+    "options": ["git save", "git commit", "git push", "git store"],
+    "answer": "git commit",
+    "category": "Git"
+  },
+  {
+    "question": "What command pushes changes to remote repository?",
+    "options": ["git upload", "git send", "git push", "git sync"],
+    "answer": "git push",
+    "category": "Git"
+  },
+  {
+    "question": "Which command fetches and merges changes from remote?",
+    "options": ["git fetch", "git pull", "git download", "git sync"],
+    "answer": "git pull",
+    "category": "Git"
+  },
+  {
+    "question": "What command shows commit history?",
+    "options": ["git history", "git commits", "git log", "git show"],
+    "answer": "git log",
+    "category": "Git"
+  },
+  {
+    "question": "Which command merges branches?",
+    "options": ["git combine", "git merge", "git join", "git unite"],
+    "answer": "git merge",
+    "category": "Git"
+  },
+  {
+    "question": "What command clones a remote repository?",
+    "options": ["git copy", "git download", "git clone", "git get"],
+    "answer": "git clone",
+    "category": "Git"
+  },
+  {
+    "question": "Which command shows differences between files?",
+    "options": ["git compare", "git diff", "git changes", "git delta"],
+    "answer": "git diff",
+    "category": "Git"
+  },
+  {
+    "question": "What command resets changes in working directory?",
+    "options": ["git undo", "git revert", "git reset", "git clear"],
+    "answer": "git reset",
+    "category": "Git"
+  },
+  {
+    "question": "Which command creates a new tag in Git?",
+    "options": ["git tag <name>", "git create tag <name>", "git new tag <name>", "git add tag <name>"],
+    "answer": "git tag <name>",
+    "category": "Git"
+  },
+  {
+    "question": "What does 'git stash' do?",
+    "options": ["Saves changes temporarily", "Deletes changes", "Commits changes", "Pushes changes"],
+    "answer": "Saves changes temporarily",
+    "category": "Git"
+  },
+  {
+    "question": "Which command shows remote repositories?",
+    "options": ["git remotes", "git remote -v", "git list remotes", "git show remotes"],
+    "answer": "git remote -v",
+    "category": "Git"
+  },
+  {
+    "question": "What does CI/CD stand for?",
+    "options": ["Continuous Integration/Continuous Deployment", "Code Integration/Code Deployment", "Container Integration/Container Deployment", "Cloud Integration/Cloud Deployment"],
+    "answer": "Continuous Integration/Continuous Deployment",
+    "category": "Deployment"
+  },
+  {
+    "question": "What does 'sudo' stand for?",
+    "options": ["Super User Do", "Switch User Do", "System User Do", "Secure User Do"],
+    "answer": "Super User Do",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which command changes file ownership?",
+    "options": ["chmod", "chown", "chgrp", "owner"],
+    "answer": "chown",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What does the '&&' operator do in bash?",
+    "options": ["Runs commands in parallel", "Runs second command if first succeeds", "Combines outputs", "Creates background process"],
+    "answer": "Runs second command if first succeeds",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What is the purpose of GitHub Actions?",
+    "options": ["Code editing", "CI/CD automation", "File storage", "Issue tracking"],
+    "answer": "CI/CD automation",
+    "category": "Deployment"
+  },
+  {
+    "question": "Which command initializes a new Git repository?",
+    "options": ["git init", "git start", "git create", "git new"],
+    "answer": "git init",
+    "category": "Git"
+  },
+  {
+    "question": "What does HTTP status code 200 indicate?",
+    "options": ["OK", "Not Found", "Bad Request", "Internal Server Error"],
+    "answer": "OK",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "Which HTTP status code means 'Not Found'?",
+    "options": ["200", "301", "404", "500"],
+    "answer": "404",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "What does HTTP status code 500 indicate?",
+    "options": ["OK", "Not Found", "Internal Server Error", "Service Unavailable"],
+    "answer": "Internal Server Error",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "Which HTTP status code means 'Bad Request'?",
+    "options": ["200", "400", "401", "403"],
+    "answer": "400",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "What does HTTP status code 403 mean?",
+    "options": ["Forbidden", "Unauthorized", "Not Found", "Bad Gateway"],
+    "answer": "Forbidden",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "Which HTTP status code means 'Unauthorized'?",
+    "options": ["401", "403", "404", "500"],
+    "answer": "401",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "What does HTTP status code 302 indicate?",
+    "options": ["Permanent Redirect", "Temporary Redirect", "Bad Request", "Gateway Timeout"],
+    "answer": "Temporary Redirect",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "Which HTTP status code indicates 'Service Unavailable'?",
+    "options": ["502", "503", "504", "505"],
+    "answer": "503",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "What does HTTP status code 301 indicate?",
+    "options": ["Temporary Redirect", "Permanent Redirect", "Bad Gateway", "OK"],
+    "answer": "Permanent Redirect",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "Which HTTP status code means 'Gateway Timeout'?",
+    "options": ["504", "502", "503", "500"],
+    "answer": "504",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "What does HTTP status code 201 indicate?",
+    "options": ["Created", "Accepted", "No Content", "OK"],
+    "answer": "Created",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "Which HTTP status code means 'No Content'?",
+    "options": ["200", "201", "204", "206"],
+    "answer": "204",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "What does HTTP status code 206 indicate?",
+    "options": ["Partial Content", "Accepted", "Reset Content", "OK"],
+    "answer": "Partial Content",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "Which HTTP status code means 'Accepted'?",
+    "options": ["200", "201", "202", "203"],
+    "answer": "202",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "What does HTTP status code 304 mean?",
+    "options": ["Not Modified", "Temporary Redirect", "Permanent Redirect", "No Content"],
+    "answer": "Not Modified",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "Which HTTP status code means 'Bad Gateway'?",
+    "options": ["500", "502", "503", "504"],
+    "answer": "502",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "What does HTTP status code 429 indicate?",
+    "options": ["Too Many Requests", "Forbidden", "Request Timeout", "Not Acceptable"],
+    "answer": "Too Many Requests",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "Which HTTP status code means 'Request Timeout'?",
+    "options": ["400", "401", "408", "429"],
+    "answer": "408",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "What does HTTP status code 415 indicate?",
+    "options": ["Unsupported Media Type", "Not Acceptable", "Method Not Allowed", "Bad Request"],
+    "answer": "Unsupported Media Type",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "Which HTTP status code means 'Method Not Allowed'?",
+    "options": ["403", "404", "405", "406"],
+    "answer": "405",
+    "category": "HTTP Codes"
+  },
+  {
+    "question": "Which command shows the current logged-in users in Linux?",
+    "options": ["who", "users", "w", "all"],
+    "answer": "who",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which Linux command is used to view running services?",
+    "options": ["service --status-all", "ps aux", "systemctl list-units", "chkconfig"],
+    "answer": "systemctl list-units",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which command is used to display the manual pages in Linux?",
+    "options": ["help", "man", "info", "docs"],
+    "answer": "man",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which port does SMTP use by default?",
+    "options": ["25", "80", "110", "443"],
+    "answer": "25",
+    "category": "Networking"
+  },
+  {
+  "question": "Which HTTP status code means 'Not Acceptable'?",
+  "options": ["404", "406", "415", "429"],
+  "answer": "406",
+  "category": "HTTP Codes"
+  },
+  {
+    "question": "What does the 'chmod 755' command do?",
+    "options": ["Sets read/write permissions", "Sets execute permissions", "Sets full permissions for owner, read/execute for others", "Removes all permissions"],
+    "answer": "Sets full permissions for owner, read/execute for others",
+    "category": "Linux Commands"
+  },
+
+  {
+    "question": "Which command is used to change the current directory in Linux?",
+    "options": ["cd", "chdir", "change", "dir"],
+    "answer": "cd",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What does the 'chmod 644' command do?",
+    "options": ["Full permissions for owner, read/write for others", "Read/write for owner, read-only for others", "Read/execute for all", "No permissions for others"],
+    "answer": "Read/write for owner, read-only for others",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What does the 'chown user:group file.txt' command do?",
+    "options": ["Changes file permissions", "Changes the owner and group of the file", "Changes file size", "Moves the file to a new directory"],
+    "answer": "Changes the owner and group of the file",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What does the 'ls -lh' command do?",
+    "options": ["Lists files with human-readable sizes", "Lists hidden files only", "Lists files sorted by date", "Lists files in long format without sizes"],
+    "answer": "Lists files with human-readable sizes",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What does the 'df -Th' command display?",
+    "options": ["Disk usage by user", "Disk space with file system type and human-readable sizes", "Memory usage", "Number of open files"],
+    "answer": "Disk space with file system type and human-readable sizes",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What does the 'ps -ef' command show?",
+    "options": ["All running processes in full format", "Processes started by root only", "Processes using most memory", "Only background processes"],
+    "answer": "All running processes in full format",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What does the 'tar -xvzf file.tar.gz' command do?",
+    "options": ["Compresses files into tar.gz format", "Extracts a gzip-compressed tar file with verbose output", "Lists contents of tar.gz without extracting", "Deletes a tar.gz file"],
+    "answer": "Extracts a gzip-compressed tar file with verbose output",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "What does the 'grep -i' option do?",
+    "options": ["Searches case-insensitively", "Searches recursively", "Shows line numbers", "Counts matches"],
+    "answer": "Searches case-insensitively",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which command is used to display the contents of a file page by page?",
+    "options": ["cat", "more", "less", "view"],
+    "answer": "less",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which command in Git is used to discard local changes?",
+    "options": ["git revert", "git reset", "git checkout -- <file>", "git undo"],
+    "answer": "git checkout -- <file>",
+    "category": "Git"
+  },
+  {
+    "question": "Which Git command is used to fetch changes from remote without merging?",
+    "options": ["git fetch", "git pull", "git clone", "git sync"],
+    "answer": "git fetch",
+    "category": "Git"
+  },
+  {
+    "question": "What does the 'touch' command do in Linux?",
+    "options": ["Opens a file", "Creates an empty file", "Deletes a file", "Moves a file"],
+    "answer": "Creates an empty file",
+    "category": "Linux Commands"
+  },
+  {
+    "question": "Which Git command is used to temporarily store changes without committing?",
+    "options": ["git save", "git stash", "git store", "git keep"],
+    "answer": "git stash",
+    "category": "Git"
+  },
+  {
+    "question": "What is the main purpose of 'curl' command in Linux?",
+    "options": ["Download files", "Test HTTP requests", "View logs", "Compress files"],
+    "answer": "Test HTTP requests",
+    "category": "Linux Commands"
+  }
+
+]
+
+  
