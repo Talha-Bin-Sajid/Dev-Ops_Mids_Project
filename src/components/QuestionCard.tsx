@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Clock, Heart, Target, Zap } from 'lucide-react';
 import { Question } from '../types';
 
@@ -9,6 +9,7 @@ interface QuestionCardProps {
   lives: number;
   score: number;
   timeRemaining: number;
+  consecutiveCorrect: number;
   onAnswer: (selectedAnswer: string) => void;
 }
 
@@ -19,10 +20,12 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
   lives,
   score,
   timeRemaining,
+  consecutiveCorrect,
   onAnswer,
 }) => {
   const [selectedAnswer, setSelectedAnswer] = useState<string>('');
   const [showFeedback, setShowFeedback] = useState(false);
+  const [extraLifeEarned, setExtraLifeEarned] = useState(false);
 
   const handleAnswerSelect = (answer: string) => {
     if (selectedAnswer || showFeedback) return;
@@ -30,10 +33,16 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
     setSelectedAnswer(answer);
     setShowFeedback(true);
     
+    const isCorrect = answer === question.answer;
+    if (isCorrect && (consecutiveCorrect + 1) % 5 === 0) {
+      setExtraLifeEarned(true);
+    }
+    
     setTimeout(() => {
       onAnswer(answer);
       setSelectedAnswer('');
       setShowFeedback(false);
+      setExtraLifeEarned(false);
     }, 1500);
   };
 
@@ -77,6 +86,9 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
           <div className="flex items-center space-x-2 text-purple-400">
             <Zap size={20} />
             <span className="font-bold">{questionNumber}/{totalQuestions}</span>
+          </div>
+          <div className="flex items-center space-x-2 text-yellow-400">
+            <span className="font-bold">Streak: {consecutiveCorrect}</span>
           </div>
         </div>
         
@@ -129,6 +141,11 @@ export const QuestionCard: React.FC<QuestionCardProps> = ({
               <div className="border-red-400 bg-red-900 text-red-300">
                 ✗ INCORRECT! Life support compromised. 
                 Correct answer: {question.answer}
+              </div>
+            )}
+            {extraLifeEarned && (
+              <div className="mt-2 text-green-400 font-bold animate-bounce">
+                +1 LIFE! (5 consecutive correct answers)
               </div>
             )}
           </div>

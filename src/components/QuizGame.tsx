@@ -3,6 +3,7 @@ import { QuestionCard } from './QuestionCard';
 import { GameOverScreen } from './GameOverScreen';
 import { Question, GameState, GameStats } from '../types';
 import { TimeWarningModal } from './TimeWarningModal';
+import Confetti from 'react-confetti';
 
 interface QuizGameProps {
   questions: Question[];
@@ -31,6 +32,8 @@ export const QuizGame: React.FC<QuizGameProps> = ({ questions, onBackToMenu }) =
   const [highScore, setHighScore] = useState<number>(0);
   const [showTimeWarning, setShowTimeWarning] = useState<boolean>(false);
   const [isNewHighScore, setIsNewHighScore] = useState<boolean>(false);
+  const [consecutiveCorrect, setConsecutiveCorrect] = useState<number>(0);
+  const [showConfetti, setShowConfetti] = useState<boolean>(false);
   
   const timerRef = useRef<NodeJS.Timeout>();
   const lastActiveTimeRef = useRef<number>(Date.now());
@@ -49,18 +52,12 @@ export const QuizGame: React.FC<QuizGameProps> = ({ questions, onBackToMenu }) =
     setShuffledQuestions(shuffled);
   }, [questions]);
 
-  // Timer logic with continuous running
+  // Timer logic
   useEffect(() => {
     if (gameState.isGameOver) return;
 
     const handleVisibilityChange = () => {
-      if (document.hidden) {
-        // Tab became inactive - store current time
-        lastActiveTimeRef.current = Date.now();
-      } else {
-        // Tab became active - update last active time
-        lastActiveTimeRef.current = Date.now();
-      }
+      lastActiveTimeRef.current = Date.now();
     };
 
     const updateTimer = () => {
@@ -72,14 +69,12 @@ export const QuizGame: React.FC<QuizGameProps> = ({ questions, onBackToMenu }) =
         setGameState(prev => {
           const newTimeRemaining = Math.max(0, prev.timeRemaining - elapsedSeconds);
           
-          // Show warning when crossing the 10 second threshold
           if (prev.timeRemaining > 10 && newTimeRemaining <= 10) {
             setShowTimeWarning(true);
             setTimeout(() => setShowTimeWarning(false), 1500);
           }
 
           if (newTimeRemaining <= 0) {
-            // Time expired
             const newState = {
               ...prev,
               lives: prev.lives - 1,
@@ -98,7 +93,6 @@ export const QuizGame: React.FC<QuizGameProps> = ({ questions, onBackToMenu }) =
       }
     };
 
-    // Start the timer
     timerRef.current = setInterval(updateTimer, 1000);
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
@@ -114,7 +108,6 @@ export const QuizGame: React.FC<QuizGameProps> = ({ questions, onBackToMenu }) =
       const wrongAnswers = gameState.questionsAnswered - correctAnswersCount;
       const finalScore = gameState.score;
 
-      // Check and update high score
       if (finalScore > highScore) {
         setHighScore(finalScore);
         setIsNewHighScore(true);
@@ -153,9 +146,23 @@ export const QuizGame: React.FC<QuizGameProps> = ({ questions, onBackToMenu }) =
     }
 
     setGameState(prevState => {
+      let newConsecutive = isCorrect ? consecutiveCorrect + 1 : 0;
+      let extraLife = 0;
+
+      // Award extra life every 5 consecutive correct answers
+      if (isCorrect && newConsecutive % 5 === 0 && newConsecutive > 0) {
+        extraLife = 1;
+        setShowConfetti(true);
+        setTimeout(() => setShowConfetti(false), 2000);
+      }
+
+      setConsecutiveCorrect(newConsecutive);
+
       const newState = {
         ...prevState,
-        lives: isCorrect ? prevState.lives : prevState.lives - 1,
+        lives: isCorrect 
+          ? prevState.lives + extraLife 
+          : prevState.lives - 1,
         score: isCorrect
           ? prevState.score + 10 + prevState.timeRemaining
           : prevState.score,
@@ -169,7 +176,10 @@ export const QuizGame: React.FC<QuizGameProps> = ({ questions, onBackToMenu }) =
       ) {
         return { ...newState, isGameOver: true };
       } else {
-        return { ...newState, currentQuestionIndex: prevState.currentQuestionIndex + 1 };
+        return { 
+          ...newState, 
+          currentQuestionIndex: prevState.currentQuestionIndex + 1 
+        };
       }
     });
   };
@@ -183,8 +193,8 @@ export const QuizGame: React.FC<QuizGameProps> = ({ questions, onBackToMenu }) =
       isGameOver: false,
       timeRemaining: 30,
     });
-
     setCorrectAnswersCount(0);
+    setConsecutiveCorrect(0);
     setIsNewHighScore(false);
     const shuffled = [...questions].sort(() => Math.random() - 0.5);
     setShuffledQuestions(shuffled);
@@ -213,6 +223,14 @@ export const QuizGame: React.FC<QuizGameProps> = ({ questions, onBackToMenu }) =
 
   return (
     <>
+      {showConfetti && (
+        <Confetti 
+          width={window.innerWidth}
+          height={window.innerHeight}
+          recycle={false}
+          numberOfPieces={200}
+        />
+      )}
       {showTimeWarning && <TimeWarningModal />}
       <QuestionCard
         question={shuffledQuestions[gameState.currentQuestionIndex]}
@@ -221,6 +239,7 @@ export const QuizGame: React.FC<QuizGameProps> = ({ questions, onBackToMenu }) =
         lives={gameState.lives}
         score={gameState.score}
         timeRemaining={gameState.timeRemaining}
+        consecutiveCorrect={consecutiveCorrect}
         onAnswer={handleAnswer}
       />
     </>

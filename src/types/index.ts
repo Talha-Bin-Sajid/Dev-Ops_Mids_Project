@@ -1,11 +1,3 @@
-export interface Question {
-  id: string;
-  question: string;
-  options: string[];
-  answer: string;
-  category: string;
-}
-
 export interface GameState {
   currentQuestionIndex: number;
   lives: number;
@@ -21,4 +13,13 @@ export interface GameStats {
   wrongAnswers: number;
   finalScore: number;
   performance: string;
+}
+
+export interface Question {
+  id: string;
+  question: string;
+  options: string[];
+  answer: string;
+  category: string;
+  difficulty: string;
 }

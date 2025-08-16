@@ -17,6 +17,7 @@ MISSION BRIEFING:
 • You start with 3 lives
 • Answer DevOps questions correctly to survive
 • Wrong answers cost you a life
+• Get +1 LIFE for every 5 consecutive correct answers
 • 30 seconds per question
 • Achieve the highest score possible
 
@@ -75,4 +76,4 @@ Are you ready to prove your DevOps skills?`;
   );
 };
 
-export default WelcomeScreen; // Changed from named export to default export
+export default WelcomeScreen;
